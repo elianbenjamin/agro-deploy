@@ -1,0 +1,281 @@
+@import "../../style/mixin.scss";
+
+.image-gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 90px;
+  position: relative;
+  gap: 70px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets/gallery-images/picadoraCamion.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    @include background_opacity();
+    z-index: -1;
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  max-width: 600px;
+  height: 20%;
+
+  h1 {
+    border-bottom: var(--border);
+    font-size: 2.2em;
+    width: 70%;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: var(--border-transparent);
+  backdrop-filter: blur(5px);
+  user-select: none;
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 15%;
+
+    .button {
+      height: 60px;
+      width: 60px;
+      padding: 10px;
+      border: var(--border);
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 10px rgba(210, 210, 210, 0.1);
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+      @include brown_blur();
+
+      svg {
+        height: 100%;
+        width: 100%;
+        padding-left: 5px;
+      }
+    }
+
+    p {
+      font-size: 1.8em;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 85%;
+    max-height: 85%;
+    width: 100%;
+
+    .image-container {
+      height: 400px;
+      max-width: 300px;
+      box-shadow: 0px 0px 10px black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.5s;
+      border-radius: 5px;
+
+      img {
+        max-height: 100%;
+      }
+    }
+    .img_on {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .image-gallery {
+    .content {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+
+        .image-container {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .image-gallery {
+    height: auto;
+
+    .title-container {
+      h1 {
+        font-size: 1.9em;
+      }
+      p {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+    .content {
+      .buttons-container {
+        .button {
+          height: 50px;
+          width: 50px;
+          svg {
+          }
+        }
+        p {
+          font-size: 1.3em;
+        }
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        justify-items: center;
+        align-items: center;
+
+        .image-container {
+          margin: 20px;
+
+          justify-content: center;
+          align-items: center;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-gallery {
+    .title-container {
+      h1 {
+        font-size: 1.7em;
+      }
+      p {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+    .content {
+      .buttons-container {
+        .button {
+          height: 45px;
+          width: 45px;
+          svg {
+          }
+        }
+        p {
+          font-size: 1.3em;
+        }
+      }
+      .gallery {
+        .image-container {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .image-gallery {
+    .title-container {
+      h1 {
+        font-size: 1.7em;
+      }
+      p {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+    .content {
+      .buttons-container {
+        .button {
+          height: 45px;
+          width: 45px;
+          svg {
+          }
+        }
+        p {
+          font-size: 1.3em;
+        }
+      }
+      .gallery {
+        .image-container {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 280px) {
+  .image-gallery {
+    .title-container {
+      h1 {
+        font-size: 1.7em;
+      }
+      p {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+    .content {
+      .buttons-container {
+        .button {
+          height: 45px;
+          width: 45px;
+          svg {
+          }
+        }
+        p {
+          font-size: 1.3em;
+        }
+      }
+      .gallery {
+        .image-container {
+          
+          height: 150px;
+        }
+      }
+    }
+  }
+}

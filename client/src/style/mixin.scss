@@ -1,0 +1,47 @@
+@mixin background_opacity() {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.618);
+}
+
+@mixin brown_blur() {
+  backdrop-filter: blur(10px);
+  background-color: rgba(127, 76, 43, 0.134);
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+@mixin navBar_button() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 0;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-101%);
+    background-color: #a66400;
+    height: 2px;
+    transition: transform 0.5s;
+    width: 100%;
+  }
+
+  &:hover::after {
+    transform: translateX(0);
+  }
+}
