@@ -1,7 +1,7 @@
 import { scroller } from "react-scroll";
 import style from "./navBarButtons.module.scss";
 import { CloseIcon } from "../../assets/Icons";
-
+import { useEffect } from "react";
 
 interface Props {
   setMenuSandwichOpen?: (boolean: boolean) => void;

@@ -9,14 +9,16 @@
   align-items: center;
   border: var(--border-transparent);
   backdrop-filter: blur(10px);
+  flex: 1;
+  padding: 25px;
 
   .Slider {
-    width: 90%;
+    width: 98%;
     margin: 0 auto;
 
     .imgContainer {
       overflow: hidden;
-      height: 450px;
+      height: 500px;
       width: 200px;
 
       div {
@@ -55,23 +57,8 @@
   .SliderContainer {
     .Slider {
       .imgContainer {
-        div {
+        height: div {
           width: 90%;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 835px) {
-  .SliderContainer {
-
-    .Slider {
-
-      .imgContainer {
-
-        div {
-          width: 335px;
         }
       }
     }
@@ -84,9 +71,28 @@
     padding: 0 10px;
 
     .Slider {
+      width: 95%;
 
       .imgContainer {
-        height: 350px;
+        height: 380px;
+
+        div {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .SliderContainer {
+    height: 70px;
+
+    .Slider {
+      width: 90%;
+
+      .imgContainer {
+        height: 370px;
 
         div {
           width: 250px;
@@ -96,37 +102,25 @@
   }
 }
 
-// @media screen and (max-width: 735px) {
-//   .SliderContainer {
-
-//     .Slider {
-//       width: 93%;
-
-//       .imgContainer {
-
-//         div {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 600px) {
   .SliderContainer {
-    height: 350px;
-
     .Slider {
-      width: 90%;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .imgContainer {
-        height: 300px;
+        height: 430px;
+        padding: 5px;
 
         div {
-          width: 222px;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
   }
 }
-
