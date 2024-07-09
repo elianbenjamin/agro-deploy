@@ -30,8 +30,8 @@ const Landing = () => {
       <Service />
       <Video />
       <About />
-      <ImageGallery />
       <ScioCup />
+      <ImageGallery />
     </div>
   );
 };
