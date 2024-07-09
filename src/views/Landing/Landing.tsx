@@ -7,6 +7,7 @@ import { useContext, useEffect } from "react";
 import { scroller } from "react-scroll";
 import Video from "../../components/videobackground/Video";
 import { FullSizeImageContext, FullSizeImageContextType } from "../../FullSizeImageContext";
+import ScioCup from "../../components/ScioCup/ScioCup";
 
 const Landing = () => {
   const { pageId } = useContext(
@@ -30,6 +31,7 @@ const Landing = () => {
       <Video />
       <About />
       <ImageGallery />
+      <ScioCup />
     </div>
   );
 };
