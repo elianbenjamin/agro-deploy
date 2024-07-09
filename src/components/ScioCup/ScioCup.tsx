@@ -1,12 +1,9 @@
 import styles from "./scioCup.module.scss";
-import img1 from "../../assets/gallery-images/scioCup1.jpg";
 
 const ScioCup = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <img className={styles.img} src={img1} alt="" />
-      </div>
+      <div className={styles.imgContainer}></div>
       <div className={styles.txtContainer}>
         <h1>Lo que nos hace destacar</h1>
 
@@ -20,6 +17,14 @@ const ScioCup = () => {
           óptimo, podemos ajustar nuestras estrategias de cosecha o esperar
           hasta que las condiciones sean más favorables.
         </p>
+
+        <a
+          href="https://sciocup.com/"
+          target="_blank"
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          <div className={styles.saberMas}>Saber mas</div>
+        </a>
       </div>
     </div>
   );
